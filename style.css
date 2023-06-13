@@ -1,21 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;900&display=swap");
 * {
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0%;
+  font-family: "Open Sans", sans-serif;
 }
 
-.img-banner {
-  max-width: 100%;
-}
 .name-wrapper {
   display: inline-block;
 }
 
-.ally {
-  display: inline-block;
-  white-space: nowrap;
-  color: white;
-  margin-left: 10%;
-}
 .studio {
   display: inline-block;
   margin-left: 1px;
@@ -23,26 +17,49 @@
 }
 .navigate {
   background-color: rgb(1, 2, 16);
-  height: 80px;
-}
-nav ul {
+  border: 1px solid rgba(255, 255, 255, 0.197);
+  padding: 10px;
+  height: 65px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  justify-content: end;
-  gap: 2%;
-  margin: 1%;
-  margin-top: -1%;
 }
-nav ul li {
+
+.name-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+
+.ally {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.studio {
+  display: inline-block;
+  margin-left: 1px;
+  color: rgba(255, 255, 255, 0.437);
+}
+
+ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
   color: white;
 }
+
+li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .style-botom {
   padding: 10px;
-  margin-top: -1%;
   background-color: #c32456;
   border-radius: 20px;
-  display: inline-block;
 }
 .banner-wrapper {
   position: relative;
@@ -58,10 +75,12 @@ nav ul li {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 350%;
+  font-size: 64px;
   text-align: left;
   width: 80%;
   line-height: 150%;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
 }
 .people {
   display: grid;
@@ -85,28 +104,39 @@ nav ul li {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 25px;
   color: white;
 }
+.title-projects {
+  margin-left: 25%;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
 
-.website,
-.title-rostov {
-  margin: 0;
-  padding: 5px;
-}
-.people-photo {
-  max-width: 100%;
-  height: auto;
-}
 .container {
-  width: 40%;
-  height: 50%;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1%;
+  max-width: 50%;
+}
+
+.container-two {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1%;
+  max-width: 50%;
+  object-fit: cover;
 }
 
 .container .one::before,
 .container .three::before,
-.container .two::before,
-.container .four::before {
+.container-two .two::before,
+.container-two .four::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -119,13 +149,13 @@ nav ul li {
 
 .container .one,
 .container .three,
-.container .two,
-.container .four {
+.container-two .two,
+.container-two .four {
   position: relative;
 }
 
-.container .website,
-.container .title-golden {
+.website,
+.title {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -133,40 +163,50 @@ nav ul li {
   padding: 5px;
   color: white;
   font-size: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.168);
   z-index: 2;
 }
 
-.container .title-golden {
+.title {
   bottom: 50px;
+}
+.website-people {
+  font-size: 15px;
 }
 .projects-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .contacts {
   display: grid;
-  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1%;
+  gap: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5%;
+  font-size: 150%;
+  line-height: 150%;
+}
+.direction {
+  font-size: 45%;
+  font-weight: lighter;
 }
 .photo-map {
   width: 30%;
 }
-
+.title-contact {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
 footer {
   background-color: rgb(1, 2, 16);
-  width: 100%;
+  width: 100vw;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.197);
   text-align: center;
 }
